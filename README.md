@@ -21,7 +21,7 @@ To check the visa code, we will use a node package module called **visa-validati
 After creating a backend project, we will create a requesthandler that will call the function responsible for creating the node worker. Into **bootstrap.js** we will add this line of code:
 
 ```javascript
-httpServer.addRequestHandler('/verify-visa', 'handler.js', 'check')
+httpServer.addRequestHandler('/verify-visa', 'handler.js', 'check');
 ```
 
 
@@ -81,12 +81,12 @@ That means that the function ```check(req, res)``` contained into **handler.js**
 ```
 var myWorker = new NodeWorker( './node-worker.js', 'my-worker');
 ```
-Then it will get the parameter on the query string, so it can post it to the node worker 
+Then it will get the parameter on the query string, so it can post it to the node worker.
 ```
 myWorker.port.postMessage(query);
 ```
 
-On the other side, when the **node worker** is created it waits for an event from the **handler**. When it receive the message that it waits for, it post a response containing the result of the **visa-validation node module** and finally close the **node worker**.
+On the other side, when the **node worker** is created it waits for an event from the **handler**. When it receives the message that it is waiting for, it posts a response containing the result of the **visa-validation node module** and finally closes the **node worker**.
 ```javascript
 workerPort.onmessage = function(event){
     	var validation = visaCard.isValidCardNumber(event.data);
