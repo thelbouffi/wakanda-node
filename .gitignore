@@ -43,3 +43,6 @@ node_modules/
 
 # Wakanda local files
 */.wakanda/hashes.json
+
+*WakTDef
+Logs
