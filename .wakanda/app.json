@@ -1,0 +1,11 @@
+{
+  "name": "wakanda-node",
+  "components": [
+    {
+      "type": "backend",
+      "template": "wakanda-javascript",
+      "name": "backend",
+      "path": "./backend"
+    }
+    ]
+}

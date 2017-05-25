@@ -1,0 +1,23 @@
+{
+  "name": "wakanda-node",
+  "version": "1.0.0",
+  "description": "Wakanda using Node module",
+  "main": "bootstrap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/thelbouffi/wakanda-node"
+  },
+  "keywords": [
+    "wakanda",
+    "node",
+    "visa-validation"
+  ],
+  "author": "Taha El Bouffi",
+  "license": "ISC",
+  "dependencies": {
+    "visa-validation": "^1.0.1"
+  }
+}

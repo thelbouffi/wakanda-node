@@ -1,0 +1,1 @@
+ httpServer.addRequestHandler('/verify-visa', 'handler.js', 'check');

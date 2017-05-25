@@ -1,0 +1,1 @@
+var visaCard = requireNode('visa-validation');onconnect = function(connectEvent) {    var workerPort = connectEvent.ports[0];        workerPort.onmessage = function(event){    	var validation = visaCard.isValidCardNumber(event.data);    	workerPort.postMessage( validation );		close();    }}
